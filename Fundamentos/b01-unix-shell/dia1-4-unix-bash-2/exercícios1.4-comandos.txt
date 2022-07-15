@@ -1,0 +1,1 @@
+Exercícios utilizandos comandos no terminal para alterar permissões (chmod), visuragir com processos (ps, jobs, sleep, bg, fg, kill...)
