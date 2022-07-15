@@ -1,1 +1,9 @@
-Internet Unix Bash
+Internet 
+Unix 
+Bash
+HTML
+CSS
+GitHub
+JavaScript
+Phyton
+
