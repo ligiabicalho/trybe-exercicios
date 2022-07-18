@@ -1,0 +1,31 @@
+body {
+    font-size: 16px;
+  }
+        h1 {
+            font-size: 65px;
+            color: orange;
+            font-family: sans-serif;
+            text-decoration: underline;
+        }
+        ul {
+            background-color: rgb(225, 176, 116);
+            line-height: 1.5;
+        }
+        .pergunta {
+            background-color: bisque;
+            text-align: center;
+        }
+        p {
+          font-weight: 600;
+          font-size: 3em;
+          font-style: italic;
+        }
+        #yellow {
+          background-color: yellow;
+        }
+        #red {
+          background-color: rgb(255, 32, 32);
+        }
+        #brown {
+          background-color: rgb(124, 56, 56);
+        }
