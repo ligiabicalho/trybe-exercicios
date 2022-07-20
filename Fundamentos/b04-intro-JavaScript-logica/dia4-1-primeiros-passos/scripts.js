@@ -35,7 +35,7 @@ console.log(perimeter); */
 
 /* Switch e Case */
 
-mes = 'Trybe';
+/* mes = 'Trybe';
 let estacaoDoAno = '?';
 
 switch (mes) {
@@ -60,4 +60,16 @@ switch (mes) {
         estacaoDoAno = 'Primavera';
 }
 
-console.log(estacaoDoAno); // 'Outono'
+console.log(estacaoDoAno); // 'Outono' */
+
+let resultado = 'aprovada';
+
+switch (resultado) {
+    case 'aprovada': console.log("Parabéns! Você está aprovado no processo seletivo da Trybe");
+    break;
+    case 'reprovada': console.log("Não foi dessa vez que conseguiu aprovação no processo seletivo. Tente novamente.");
+    break;
+    case 'lista': console.log("Na trave! Você está na lista de espera das pessoas aprovadas no processo seletivo. Aguarde novas informações.");
+    break;
+    default: console.log('Não se aplica.');
+}
