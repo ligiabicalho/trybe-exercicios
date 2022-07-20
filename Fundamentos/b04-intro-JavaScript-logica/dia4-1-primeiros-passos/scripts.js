@@ -62,14 +62,18 @@ switch (mes) {
 
 console.log(estacaoDoAno); // 'Outono' */
 
-let resultado = 'aprovada';
+/* Switch e Case 2*/
 
-switch (resultado) {
-    case 'aprovada': console.log("Parabéns! Você está aprovado no processo seletivo da Trybe");
-    break;
-    case 'reprovada': console.log("Não foi dessa vez que conseguiu aprovação no processo seletivo. Tente novamente.");
-    break;
-    case 'lista': console.log("Na trave! Você está na lista de espera das pessoas aprovadas no processo seletivo. Aguarde novas informações.");
-    break;
-    default: console.log('Não se aplica.');
+let resultadoProcessoSeletivo = 'aprovada';
+let mensagem = '?';
+
+switch (resultadoProcessoSeletivo) {
+    case 'aprovada': mensagem = "Parabéns! A pessoa está aprovada no processo seletivo da Trybe";
+        break;
+    case 'reprovada': mensagem = "Não foi dessa vez que conseguiu aprovação no processo seletivo. Tente novamente.";
+        break;
+    case 'lista': mensagem = "Na trave! Você está na lista de espera das pessoas aprovadas no processo seletivo. Aguarde novas informações.";
+        break;
+    default: mensagem = 'Não se aplica.';
 }
+console.log(mensagem)
