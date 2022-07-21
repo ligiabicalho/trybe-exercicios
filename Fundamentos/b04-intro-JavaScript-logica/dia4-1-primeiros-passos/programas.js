@@ -27,9 +27,10 @@ if(a > b){
     console.log(b);
  } 
 
+
 //3. Faça um programa que retorne o maior de três números.
 
-const c = 12;
+const c = 1;
  if(a > b){
     console.log(a);
 }else if(b > c){
@@ -37,6 +38,7 @@ const c = 12;
  }else{
     console.log(c);
  } 
+
 
 //4. Faça um programa que, dado um valor definido numa constante, retorne "positive" se esse valor for positivo, "negative" se for negativo e "zero" caso contrário. 
 const d = 1
@@ -82,7 +84,7 @@ switch (pecaXadrez.toLowerCase()) {
     default: console.log('Opção inválida');
 } 
 
-//7.Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F.*/
+//7.Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F.
 
 let nota = 99;
 let resultado;
@@ -104,3 +106,39 @@ if (nota >= 0 && nota <= 100) {
     resultado = 'Nota inválida, insira um valor maior que 0 e menor que 100.'
 }
 console.log(resultado) 
+
+//8.Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false.
+
+function algumPar(num1, num2, num3) {
+    if ((num1 % 2 == 0) ||
+        (num2 % 2 == 0) ||
+        (num3 % 2 == 0)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(algumPar(5, 3, 2));  */
+
+
+//9.Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false.
+
+function algumImpar(num1, num2, num3) {
+    if ((num1 % 2 == 1) ||
+        (num2 % 2 == 1) ||
+        (num3 % 2 == 1)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(algumImpar(6, 4, 1));
+
+/*10.Escreva um programa que se inicie com dois valores em duas constantes diferentes: o custo de um produto e seu valor de venda. A partir dos valores, calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa terá ao vender mil desses produtos.
+Atente que, sobre o custo do produto, incide um imposto de 20%.
+Seu programa também deve emitir uma mensagem de erro e encerrar caso algum dos seus valores de entrada seja menor que zero.
+O lucro de um produto é o resultado da subtração do valor de venda pelo custo do mesmo, sendo que o imposto de 20% também faz parte do valor de custo.
+valorCustoTotal = valorCusto + impostoSobreOCusto
+lucro = valorVenda - valorCustoTotal (lucro de um produto) */
