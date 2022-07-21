@@ -63,7 +63,7 @@ if(ang1 && ang2 && ang3 > 0){
 }else{
     console.log('Erro: ângulo inválido!');
 }
-//6.Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz. */
+//6.Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz. 
 
 let pecaXadrez = 'Bispoo';
 switch (pecaXadrez.toLowerCase()) {
@@ -80,4 +80,27 @@ switch (pecaXadrez.toLowerCase()) {
     case 'rei': console.log('Uma casa, para qualquer direção');
         break;
     default: console.log('Opção inválida');
+} 
+
+//7.Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F.*/
+
+let nota = 99;
+let resultado;
+if (nota >= 0 && nota <= 100) {
+    if (nota >= 90) {
+        resultado = 'Conceito A';
+    } else if (nota >= 80) {
+        resultado = 'Conceito B';
+    } else if (nota >= 70) {
+        resultado = 'Conceito C';
+    } else if (nota >= 60) {
+        resultado = 'Conceito D';
+    } else if (nota >= 50) {
+        resultado = 'Conceito E';
+    } else {
+        resultado = 'Conceito F';
+    }
+} else {
+    resultado = 'Nota inválida, insira um valor maior que 0 e menor que 100.'
 }
+console.log(resultado) 
