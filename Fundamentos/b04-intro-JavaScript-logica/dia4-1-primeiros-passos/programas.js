@@ -119,7 +119,7 @@ function algumPar(num1, num2, num3) {
     }
 }
 
-console.log(algumPar(5, 3, 2));  */
+console.log(algumPar(5, 3, 2));  
 
 
 //9.Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false.
@@ -134,7 +134,7 @@ function algumImpar(num1, num2, num3) {
     }
 }
 
-console.log(algumImpar(6, 4, 1));
+console.log(algumImpar(6, 4, 1)); */
 
 /*10.Escreva um programa que se inicie com dois valores em duas constantes diferentes: o custo de um produto e seu valor de venda. A partir dos valores, calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa terá ao vender mil desses produtos.
 Atente que, sobre o custo do produto, incide um imposto de 20%.
