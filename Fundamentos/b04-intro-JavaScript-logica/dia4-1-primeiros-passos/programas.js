@@ -176,15 +176,19 @@ function salarioCLT (salarioBruto){
     } else if (salarioBase <= 2826.65) {
         valorIR = (salarioBase * 0.075) - 142.80;
         salarioLiquido = salarioBase - valorIR;
-    } else if (salarioBruto <= 3751.05) {
+    } else if (salarioBase <= 3751.05) {
         valorIR = (salarioBase * 0.15) - 354.80;
         salarioLiquido = salarioBase - valorIR;
-    } else {
-        valorIR = (salarioBase * 0.27) - 869.36;
+    } else if (salarioBase <= 4664.68) {
+        valorIR = (salarioBase * 0.225) - 636.13;
+        salarioLiquido = salarioBase - valorIR;
+    }else {
+        valorIR = (salarioBase * 0.275) - 869.36;
         salarioLiquido = salarioBase - valorIR;
     } 
-  //  return salarioLiquido;
-  let descontandoTrybe = salarioLiquido * 0.83;
-  return descontandoTrybe;
+      return salarioLiquido;
+//   let descontandoTrybe = salarioLiquido * 0.83;
+//   return descontandoTrybe;
 }
-console.log(salarioCLT(4000.00)); 
+console.log(salarioCLT(6000.00)); 
+
