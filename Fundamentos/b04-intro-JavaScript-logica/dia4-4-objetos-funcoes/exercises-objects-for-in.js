@@ -40,6 +40,13 @@ let secondInfo = {
   recorrente: 'Sim',
 };
 
+let expectedValue1 = `${info.personagem} e ${secondInfo.personagem}`;
+let expectedValue2 = `${info.origem} e ${secondInfo.origem}`;
+let expectedValue3 = `${info.nota} e ${secondInfo.nota}`;
+console.log(expectedValue1);
+console.log(expectedValue2);
+console.log(expectedValue3);
+
 for (properties in info){
   if(
     properties === 'recorrente' &&
@@ -50,7 +57,7 @@ for (properties in info){
     console.log(msgRecorrente);
     break;
   } else {
-    msgRecorrente = `Recorrencia: ${info.properties} e ${secondInfo.properties}`;
+    msgRecorrente = `Recorrencia: ${info.properties} e ${secondInfo.properties}.`;
     console.log(msgRecorrente);
   }
 }
