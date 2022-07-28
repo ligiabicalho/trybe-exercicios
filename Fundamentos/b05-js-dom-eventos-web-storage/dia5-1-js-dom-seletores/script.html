@@ -53,12 +53,38 @@
 
       const h1 = document.getElementsByTagName('h1');
       h1[0].innerText = "Exercício 5.1: JavaScript - DOM e seletores";
+
+      // function paragraphUpperCase() {
+      //   let paragraph = document.getElementsByTagName('p')[0];
+      //   paragraph.innerHTML = paragraph.innerHTML.toUpperCase();
+      // }
+      // paragraphUpperCase();
+
+      function pUpperCase (){
+        const p = document.getElementsByTagName('p');
+        for (let i in p) {
+          let text = p[i].innerHTML.toUpperCase();
+        //p[i].style.textTransform = 'uppercase';
+        }
+        return text;
+      }
+      pUpperCase();
+
+      // function paragraphs (){
+      //   const p = document.getElementsByTagName('p');
+      //   for (let i in p) {
+      //     let text = p[i].innerHTML;
+      //   console.log(text);
+      //   }  
+      // }
+      // paragraphs ();
+      
+      
 /* Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
         - document.getElementsByClassName()
         - document.getElementsByTagName()
 
- Crie e execute uma função que corrija o texto da tag <h1>.
  Crie e execute uma função que modifique todo o texto da tag <p> para maiúsculo.
     Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console. */
     </script>
