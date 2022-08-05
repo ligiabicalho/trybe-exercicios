@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia 6.1 - Formulário Trybe Trip</title>
+</head>
+<body>
+  <header>
+    <h1>Formulário Trybe Trip</h1>
+    <p>Preencha e concorra a uma viagem!</p>
+  </header>
+  <form>
+    <main>
+      <div class="dados">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" minlength="10" maxlength="40" required>
+      </div>
+      <div class="dados">
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" placeholder="Digite seu nome" required>
+      </div>
+      <div class="dados">
+        <fieldset>
+          <legend>Destino preferido:</legend>
+          <input type="radio" name="destino" id="destino1" value="cidade">
+          <label for="destino1">Cidade</label>
+          <input type="radio" name="destino" id="destino2" value="campo">
+          <label for="destino2">Campo</label>
+          <input type="radio" name="destino" id="destino3" value="praia">
+          <label for="destino3">Praia</label>
+          <input type="radio" name="destino" id="destino4" value="montanha">
+          <label for="destino4">Montanha</label>
+        </fieldset>
+      </div>
+      <div class="dados">
+        <label for="abstract">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label><br>
+        <textarea name="abstract" id="abstract" cols="30" rows="10" placeholder="Descreva seus motivos" maxlength="500" required></textarea>
+      </div>
+      <div>
+        
+      </div>
+    </main>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
