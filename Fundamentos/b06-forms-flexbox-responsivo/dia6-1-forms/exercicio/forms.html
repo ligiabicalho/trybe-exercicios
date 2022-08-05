@@ -14,35 +14,49 @@
   <form>
     <main>
       <div class="dados">
-        <label for="nome">Nome:</label>
+        <label for="nome">Nome completo:</label>
         <input type="text" name="nome" id="nome" placeholder="Digite seu nome" minlength="10" maxlength="40" required>
       </div>
       <div class="dados">
         <label for="email">E-mail:</label>
-        <input type="email" name="email" id="email" placeholder="Digite seu nome" required>
+        <input type="email" name="email" id="email" placeholder="Digite seu nome" maxlength="50" minlength="10" required>
       </div>
       <div class="dados">
         <fieldset>
           <legend>Destino preferido:</legend>
-          <input type="radio" name="destino" id="destino1" value="cidade">
+          <input type="radio" name="destino" id="destino1" value="cidade" required>
           <label for="destino1">Cidade</label>
-          <input type="radio" name="destino" id="destino2" value="campo">
+          <input type="radio" name="destino" id="destino2" value="campo" required>
           <label for="destino2">Campo</label>
-          <input type="radio" name="destino" id="destino3" value="praia">
+          <input type="radio" name="destino" id="destino3" value="praia" required>
           <label for="destino3">Praia</label>
-          <input type="radio" name="destino" id="destino4" value="montanha">
+          <input type="radio" name="destino" id="destino4" value="montanha" required>
           <label for="destino4">Montanha</label>
         </fieldset>
       </div>
       <div class="dados">
-        <label for="abstract">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label><br>
-        <textarea name="abstract" id="abstract" cols="30" rows="10" placeholder="Descreva seus motivos" maxlength="500" required></textarea>
+        <label for="why">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label><br>
+        <textarea name="why" id="why" cols="60" rows="10" placeholder="Descreva seus motivos" maxlength="500" required></textarea>
+      </div>
+      <div class="dados">
+        <label for="data">Qual a melhor data para realizar sua viagem?</label>
+        <input type="date" name="data" id="data" value="data">
       </div>
       <div>
-        
+        <label for="promo">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+        <input type="radio" name="promo" id="promo1" value="si">Sim
+        <input type="radio" name="promo" id="promo2" value="no">Não
+      </div>
+      <div class="dados">
+        <input type="checkbox" name="agree" id="agree" value="agree">
+        <label for="agree">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+      </div>
+      <div class="dados">
+        <button type="reset">Limpar</button>
+        <button type="submit" id="submit-btn" disabled>Enviar</button>
       </div>
     </main>
   </form>
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
