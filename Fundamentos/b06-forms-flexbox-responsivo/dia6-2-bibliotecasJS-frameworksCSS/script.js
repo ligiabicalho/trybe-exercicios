@@ -16,8 +16,8 @@ function enableSubmit() {
 window.onload = function () {
   const submitBtn = document.querySelector('#submit-btn')
   submitBtn.addEventListener('click', submit);
-  const agreement = document.querySelector('#agree');
-  agreement.addEventListener('change', enableSubmit);
+  const agree = document.querySelector('#agree');
+ agree.addEventListener('change', enableSubmit);
 }
 
 
