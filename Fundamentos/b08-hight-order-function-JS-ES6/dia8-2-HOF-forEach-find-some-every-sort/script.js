@@ -90,7 +90,26 @@ function getNamedBook() {
 
 //4 - Ordene os livros por data de lançamento em ordem decrescente.
 function booksOrderedByReleaseYearDesc() {
-  return books.sort((a, b) => b.releaseYear - a.releaseYear);
+  return books.sort((book1, book2) => book2.releaseYear - book1.releaseYear);
 }
 
-console.log(booksOrderedByReleaseYearDesc());
+// console.log(booksOrderedByReleaseYearDesc());
+
+// 5 - Faça uma função que retorne true, se todas as pessoas autoras nasceram no século XX, ou false, caso contrário.
+function everyoneWasBornOnSecXX() {
+  return books.every((book) => book.author.birthYear > 1900  && book.author.birthYear <= 2000)
+}
+
+// console.log(everyoneWasBornOnSecXX());
+
+// 6 - Faça uma função que retorne true, se algum livro foi lançado na década de 80, e false, caso contrário.
+function someBookWasReleaseOnThe80s() {
+  return books.some((book) => book.releaseYear >= 1980  && book.releaseYear < 1990)
+}
+
+// console.log(someBookWasReleaseOnThe80s());
+
+// 7 - Faça uma função que retorne true, caso nenhum author tenha nascido no mesmo ano, e false, caso contrário.
+function authorUnique() {
+  return (book) => book.author.birthYear
+}
