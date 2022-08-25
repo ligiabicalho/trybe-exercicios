@@ -63,26 +63,11 @@ const books = [
 
 // 2 - Crie uma string com os nomes de todas as pessoas autoras.
 
-
-callBack(acc, curr) => {
-  curr = objBook.author.name
-  return
- };
-
-function reduceNames(arrayBooks) {
-  return arrayBooks.reduce( (, objBook) => {
-    
-
-
-
-
-
-    const authors = [];
-    authors.push(objBook.author.name);
-    return authors;
-    // authors.reduce( (acc, curr) => {
-    //   return acc, curr
-    // } )
-  })
+function reduceNames() {
+  return books.reduce( (acc, book) => {
+  acc = acc + `${book.author.name}. `;
+  return acc 
+ }, '');
 }
+
 console.log(reduceNames(books));
