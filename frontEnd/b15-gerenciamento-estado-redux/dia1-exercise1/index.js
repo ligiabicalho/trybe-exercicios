@@ -1,47 +1,50 @@
-// import { composeWithDevTools } from '@redux-devtools/extension';
-// import { legacy_createStore as createStore } from 'redux';
+/* 
+Script está contido no index.html
 
-// const INITIAL_STATE = {
-//   colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
-//   index: 0,
-// };
+import { composeWithDevTools } from '@redux-devtools/extension';
+import { legacy_createStore as createStore } from 'redux';
 
-// const reducer = (state = INITIAL_STATE, action) => {
-//   switch (action.type) {
-//     case 'NEXT_COLOR':
-//       return {
-//         ...state, //manter as outras chaves do INITIAL_STATE
-//         index: (state.index % (state.colors.length - 1)) + 1,
-//       }
-//     case 'PREVIOUS_COLOR':
-//       return {
-//         ...state,
-//         index: state.index === 0 ? state.colors.length - 1 : state.index - 1
-//       }
-//     default:
-//       return state;
-//   }
-// }
+const INITIAL_STATE = {
+  colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
+  index: 0,
+};
 
-// const store = createStore(reducer, composeWithDevTools());
+const reducer = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case 'NEXT_COLOR':
+      return {
+        ...state, //manter as outras chaves do INITIAL_STATE
+        index: (state.index % (state.colors.length - 1)) + 1,
+      }
+    case 'PREVIOUS_COLOR':
+      return {
+        ...state,
+        index: state.index === 0 ? state.colors.length - 1 : state.index - 1
+      }
+    default:
+      return state;
+  }
+}
 
-// const actionNext = { type: 'NEXT_COLOR' };
-// const actionPrevious = { type: 'PREVIOUS_COLOR' };
+const store = createStore(reducer, composeWithDevTools());
 
-// const btnNext = document.querySelector('#next');
-// btnNext.addEventListener('click', () => store.dispatch(actionNext));
+const actionNext = { type: 'NEXT_COLOR' };
+const actionPrevious = { type: 'PREVIOUS_COLOR' };
 
-// const btnPrevious = document.querySelector('#previous');
-// btnPrevious.addEventListener('click', () => store.dispatch(actionPrevious));
+const btnNext = document.querySelector('#next');
+btnNext.addEventListener('click', () => store.dispatch(actionNext));
 
-// store.subscribe(() => {
-//   const globalStore = store.getState();
+const btnPrevious = document.querySelector('#previous');
+btnPrevious.addEventListener('click', () => store.dispatch(actionPrevious));
 
-//   const valueColorEl = document.querySelector('#value');
-//   const newIndex = globalStore.index;
-//   const newColor = globalStore.colors[newIndex];
-//   valueColorEl.innerHTML = newColor;
+store.subscribe(() => {
+  const globalStore = store.getState();
 
-//   const containerEl = document.querySelector('#container');
-//   containerEl.style.backgroundColor = newColor;
-// })
+  const valueColorEl = document.querySelector('#value');
+  const newIndex = globalStore.index;
+  const newColor = globalStore.colors[newIndex];
+  valueColorEl.innerHTML = newColor;
+
+  const containerEl = document.querySelector('#container');
+  containerEl.style.backgroundColor = newColor;
+}) */
