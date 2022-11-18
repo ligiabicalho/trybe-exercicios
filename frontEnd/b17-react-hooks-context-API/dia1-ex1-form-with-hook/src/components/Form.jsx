@@ -5,7 +5,7 @@ function Form() {
     fullName: '',
     age: 0,
     city: '',
-    module: '',
+    module: 'x',
   });
 
   const handleChange = (e) => {
@@ -42,6 +42,7 @@ function Form() {
           type='radio' 
           name='module' 
           value='fundamentos' 
+          checked={module === 'fundamentos'} // está assim no gabarito, no entanto nenhuma opção fica checkada!
           onChange={(handleChange)}/>
           Fundamentos
         </label>
@@ -49,7 +50,8 @@ function Form() {
           <input id='front-end' 
           type='radio' 
           name='module' 
-          value='front-end' 
+          value='front-end'
+          checked={module === 'front-end'}
           onChange={(handleChange)}/>
           Front-end
         </label>
@@ -58,6 +60,7 @@ function Form() {
           type='radio' 
           name='module' 
           value='back-end' 
+          checked={module === 'back-end'}
           onChange={(handleChange)}/>
           Back-end
         </label>
@@ -66,6 +69,7 @@ function Form() {
           type='radio' 
           name='module' 
           value='cs' 
+          checked={module === 'cs'}
           onChange={(handleChange)}/>
           Ciência da Computação
         </label>
