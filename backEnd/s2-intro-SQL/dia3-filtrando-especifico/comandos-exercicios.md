@@ -24,3 +24,14 @@ WHERE active = 0 AND store_id = '1';
 SELECT \* FROM sakila.film
 WHERE rating = 'NC-17'
 ORDER BY rental_rate, title LIMIT 50;
+
+### LIKE
+
+SELECT \* FROM sakila.film
+WHERE title LIKE '%ace%';
+
+SELECT \* FROM sakila.film
+WHERE description LIKE '%china';
+
+SELECT \* FROM sakila.film
+WHERE description LIKE '%china';
