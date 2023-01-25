@@ -42,7 +42,7 @@ ex: column 'id'
 
 #### INSERT SELECT
 
-Inserindo dados a partir de uma outra tabela.
+Inserindo dados (em A) a partir de uma outra tabela (B).
 
 INSERT INTO tabelaA (coluna1, coluna2)
 SELECT tabelaB.coluna1, tabelaB.coluna2
@@ -55,6 +55,8 @@ ORDER BY tabelaB.coluna_de_ordenacao;
 1. INSERT INTO sakila.staff (first_name, last_name, address_id, store_id, username)
    VALUES ('Lígia', 'Bicalho', '1', '1', 'ligiabicalho');
 
-2.
+2. INSERT INTO sakila.staff (first_name, last_name, address_id, store_id, username) VALUES
+   ('Mariana', 'Esteves', 1, 1, 'mariana'),
+   ('Marcelo', 'Mascarenhas', 1, 1, 'marcelo');
 
 3.
