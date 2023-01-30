@@ -1,4 +1,4 @@
-// FUNÇÃO SEM PROMISSE
+// FUNÇÃO SEM PROMISE - TRATANDO ERROS DE FORMA SÍNCRONA
 
 function dividirNumeros(num1, num2) {
   if (num2 == 0) throw new Error("Não pode ser feito uma divisão por zero");
