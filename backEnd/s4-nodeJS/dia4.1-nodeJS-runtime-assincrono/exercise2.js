@@ -12,8 +12,11 @@ function dividirNumeros(num1, num2) {
   return promise;
 }
 
-/* note que a função dividirNumeros retorna uma Promise, ou seja, ela promete que vai dividir os números. Caso não consiga realizar a divisão, ela rejeita essa promessa, utilizando a função reject. Caso ocorra tudo certo, ela resolve a promessa, utilizando a função resolve. */
+/* note que a função dividirNumeros retorna uma Promise, ou seja, ela promete que vai dividir os números. 
+Caso não consiga realizar a divisão, ela rejeita essa promessa, utilizando a função reject. Caso ocorra tudo certo, ela resolve a promessa, utilizando a função resolve. */
 
+
+//AO CHAMAR A FUNÇÃO:
 dividirNumeros(2, 1)
   .then(result => console.log(`sucesso: ${result}`))
   .catch(err => console.log(`erro: ${err.message}`));
