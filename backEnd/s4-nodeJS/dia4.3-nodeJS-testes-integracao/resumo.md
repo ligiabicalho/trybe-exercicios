@@ -44,3 +44,10 @@ npm install mocha@8.4.0 chai@4.3.4 --save-dev --save-exact
    npm init -y
    npm install mocha@8.4.0 chai@4.3.4 --save-dev --save-exact
    ATENÇÃO!! Não esquecer de colocar `node_modules` no `.gitignore`.
+
+2. Criar pastas dentro da pasta de trabalho
+   mkdir src tests/integration
+   E o arquivo de test: chocolates.test.js
+
+3. Configurar script de test no package.json
+   "test": "mocha tests/\*_/_.test.js --exit"
