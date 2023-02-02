@@ -43,3 +43,4 @@ npm install mocha@8.4.0 chai@4.3.4 --save-dev --save-exact
    cd cacau-trybe
    npm init -y
    npm install mocha@8.4.0 chai@4.3.4 --save-dev --save-exact
+   ATENÇÃO!! Não esquecer de colocar `node_modules` no `.gitignore`.
