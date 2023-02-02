@@ -50,4 +50,19 @@ npm install mocha@8.4.0 chai@4.3.4 --save-dev --save-exact
    E o arquivo de test: chocolates.test.js
 
 3. Configurar script de test no package.json
-   "test": "mocha tests/\*_/_.test.js --exit"
+   `"test": "mocha tests/**/*.test.js --exit"`
+
+4. Plugin Chai HTTP: simula uma request a API sem inicializa-la manualmente
+   comando: npm install chai-http@4.3.0 --save-dev --save-exact
+
+   O `chai-http` vai criar seu próprio listen(), escolher uma porta automaticamente, fazer a requisição ao endpoint e, por último, retornar o resultado dessa requisição.
+
+5. TDD
+   Escrever o 1º teste baseado no cenário e no contrato da API.
+
+6. Construindo a API
+   Arquivos:
+   `src/app.js`: conjunto de definições das rotas/endpoints
+   `src/files/cacauTrybe.json`: dados
+   `src/cacauTrybe.js`: (ou `server.js`) servidor propriamente dito, que consome as regras
+   Instalar Express: npm install express@4.17.1 --save-exact
