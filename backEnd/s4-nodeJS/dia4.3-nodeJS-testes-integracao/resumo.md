@@ -66,3 +66,7 @@ npm install mocha@8.4.0 chai@4.3.4 --save-dev --save-exact
    `src/files/cacauTrybe.json`: dados
    `src/cacauTrybe.js`: (ou `server.js`) servidor propriamente dito, que consome as regras
    Instalar Express: npm install express@4.17.1 --save-exact
+
+7. Dublê de Teste
+   Simula funções, para não termos dependência de arquivos externos que podem estar faltando ou bd inconsistente (mock?)
+   -> Ferramenta `Sinon`: npm install sinon@11.1.1 --save-dev --save-exact
