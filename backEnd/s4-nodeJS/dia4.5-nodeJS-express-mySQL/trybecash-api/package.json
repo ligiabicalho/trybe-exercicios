@@ -8,10 +8,19 @@
     "dev": "nodemon .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["backend", "node.js", "express", "mysql" ],
+  "keywords": [
+    "backend",
+    "node.js",
+    "express",
+    "mysql"
+  ],
   "author": "dev-ligiabicalho",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "2.0.15"
+  },
+  "dependencies": {
+    "express": "4.17.1",
+    "mysql2": "2.3.3"
   }
 }
