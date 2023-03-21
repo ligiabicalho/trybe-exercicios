@@ -2,10 +2,10 @@
   "name": "9.2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx ts-node src/index.ts"
+    "dev": "npx ts-node ./index.ts"
   },
   "author": "",
   "license": "ISC",

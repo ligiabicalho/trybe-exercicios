@@ -1,7 +1,5 @@
 // A composição de objetos/classes é uma forma de combinar objetos ou tipos de dados para construir sua estrutura.
 // Na agregação os objetos podem existir sem depender do outro objeto, por outro lado, na composição os objetos dependem da existência do outro objeto.
-
-
 interface Logger{
   log(parm: string): void;
 }
