@@ -1,5 +1,5 @@
 export default class Person{
-  constructor(private _name: string, private _birthDate: Date){
+  constructor(protected _name: string, protected _birthDate: Date){
     // se não for validar, não é necessário as linhas seguintes, a declaração pode ser direto no constructor.
     this.name = _name; // passa pela validação do set ao instanciar.
     this.birthDate = _birthDate;
