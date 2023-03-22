@@ -4,12 +4,12 @@ import Subject from "./Subject";
 
 export default class Teacher extends Person implements Employee{
   private _admissionDate = new Date();
-  private _registration = String(); // tipando e atribuindo valor?
+  private _registration = String(); // tipando e atribuindo valor. Não necessita inicializar o atributo (no constructor);
   // private _registration: string; => APENAS TIPANDO;
 
   constructor(name: string, birthDate: Date, private _subject: Subject, private _salary: number){
     super(name, birthDate)
-    // this._admissionDate = new Date(); // gera a data que foi instanciado.
+    // this._admissionDate = new Date(); // atribuindo na linha 6, não precisa inicializar?
     this.registration = this.generateRegistration(); // aqui chama o set com a validação.
   }
 
