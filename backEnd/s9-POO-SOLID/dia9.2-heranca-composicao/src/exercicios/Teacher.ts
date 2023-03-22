@@ -13,9 +13,9 @@ export default class Teacher extends Person implements Employee{
     this.registration = this.generateRegistration(); // aqui chama o set com a validação.
   }
 
-  generateRegistration(): string{
+  generateRegistration(): string {
     const randomStr = String(Date.now() * (Math.random() + 1)).replace(/\W/g, '');
-    // str.replace(regexp|substr, newSubStr|function)
+    // str.replace(regexp|substr, newSubStr|function) => \W pega os caracteres q não são alfanum.
     return `abc${randomStr}`;
   }
   
@@ -33,7 +33,7 @@ export default class Teacher extends Person implements Employee{
     return this._admissionDate;
   }
 
-  set admissionDate(newDate: Date){
+  set admissionDate(newDate: Date) {
     if (newDate.getTime() > new Date().getTime()) throw new Error('A data de admissão não pode ser uma data no futuro.');
     this._admissionDate = newDate;
   }
@@ -42,7 +42,7 @@ export default class Teacher extends Person implements Employee{
     return this._subject;
   }
 
-  set subject(newSubject: Subject){
+  set subject(newSubject: Subject) {
     this._subject = newSubject;
   }
 
@@ -50,7 +50,7 @@ export default class Teacher extends Person implements Employee{
     return this._salary;
   }
 
-  set salary(newSalary: number){
+  set salary(newSalary: number) {
     if (newSalary < 0) throw new Error('O salário não pode ser negativo.');
     this._salary = newSalary;
   }
