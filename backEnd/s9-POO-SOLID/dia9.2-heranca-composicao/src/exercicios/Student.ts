@@ -1,6 +1,6 @@
 // EXERCÍCIO 2 
 
-import Person from "./exercicio1";
+import Person from "./Person";
 
 export default class Student extends Person{
   private _enrollment = String();

@@ -1,5 +1,7 @@
-import Person from './exercicio1';
-import Student from './student';
+import Person from './Person';
+import Student from './Student';
+import Subject from './Subject';
+import Teacher from './Teacher';
 
 // exercício 1
 const ligia = new Person('Ligia da Consolação', new Date('1989/04/25'));
@@ -37,6 +39,30 @@ console.log(jessica);
 console.log(tamires);
 console.log(fernando);
 
-// deve retornar erro
+// Validação quantidade de trabalhos
 // fernando.assignmentsGrades = [45, 42, 47];
+
+// EXERCÍCIO 5 
+
+const math = new Subject('Matemática');
+const history = new Subject('História');
+const philosophy = new Subject('Filosofia');
+
+const marta = new Teacher('Marta da Silva', new Date('1980/03/30'), math, 2000);
+const joao = new Teacher('João Antônio da Costa', new Date('1982/04/21'), history, 2000);
+const lucio = new Teacher('Lucio Teixeira', new Date('1986/01/29'), philosophy, 2000);
+
+console.log(marta);
+console.log(joao);
+console.log(lucio);
+
+// deve retornar erro
+//const invalidTeacherSalary = new Teacher('Marta da Silva', new Date('1980/03/30'), 2000, math);
+
+// deve retornar erro
+// const today = new Date();
+// today.setDate(today.getDate() + 1)
+// const tomorrow = today;
+// marta.admissionDate = tomorrow;
+
 
