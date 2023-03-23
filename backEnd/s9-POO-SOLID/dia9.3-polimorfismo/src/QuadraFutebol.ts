@@ -9,10 +9,11 @@ export default class QuadraFutebol extends Quadra {
 
   public reservar<IFutebol>(date: Date): IAgenda<IFutebol> {
     const protocolo = (Math.random() + 1).toString(30).substring(3);
+    const regras: IFutebol = this.futebolData as IFutebol;
     return {
       protocolo,
       data: date,
-      regras: this.futebolData as unknown as IFutebol,
+      regras,
     };
   }
 }
