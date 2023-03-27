@@ -1,0 +1,23 @@
+h1, p{
+    text-align: center;
+}
+
+p{
+
+}
+
+li:hover{
+    background-color: rgb(117, 208, 72);
+    transition: all 0.7s ease-out;
+}
+
+li:active{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ol{
+    list-style-type: upper-roman;
+}
+ul{
+    list-style: "\1F680";
+}
