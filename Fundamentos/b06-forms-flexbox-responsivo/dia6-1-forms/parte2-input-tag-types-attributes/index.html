@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.1 - Forms - Parte II</title>
+</head>
+<body>
+<header>
+  <h1>LOGIN</h1>
+  <p>Primeiro formulário - exercício de fixação</p>
+</header>
+<form action="" method="get">
+  <main>
+    <div class="line-content">
+      <label for="email">E-mail:</label>
+      <input type="email" name="email" id="email" placeholder="Digite seu melhor e-mail" autocomplete="off" autofocus required>
+    </div></br>
+    <div>
+      <label>Senha:
+        <input type="password" name="senha" id="password" placeholder="Digite sua senha"required>
+      </label>
+    </div></br>
+    <div>
+      <input type="checkbox" name="lembre-me" id="lembre-me" value="s" required>
+      <label for="lembre-me">Lembre-me</label>
+    </div></br>
+    <div class="line-content">
+      <fieldset>
+        <legend>Tipo de e-mail</legend>
+        <input type="radio" name="email-type" id="e-mail-type1" value="pess">
+        <label for="email-type1">Pessoal</label>
+        <input type="radio" name="email-type" id="e-mail-type2" value="prof">
+        <label for="email-type2">Profissional</label>
+      </fieldset></br>
+    </div>
+    <div>
+      <button type="submit">Entrar</button>
+    </div>
+  </main>
+
+</form>  
+</body>
+</html>
