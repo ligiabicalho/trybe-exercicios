@@ -1,0 +1,41 @@
+Método Scrum:
+O conceito principal é a ideia de finalizar um projeto mais rápido, com melhor qualidade, otimizando os recursos humanos e materiais. Além disso, potencializa o trabalho em equipe com foco no cumprimento dos prazos estipulados por meio do acompanhamento da evolução do projeto.
+
+Monte a equipe. 
+
+Passo 1: Ter uma visão total do projeto 
+
+O Product Owner ou dono do projeto precisa visualizar todo o projeto e o que se espera do produto final para a realização do planejamento. Basicamente, é necessário ter bem claro qual é o objetivo a ser atingido na finalização do projeto.
+
+Passo 2: Dividir as funcionalidades (Criar o Product Backlog)
+
+Nesse momento, o responsável pelo projeto precisa desmembrar cada conjunto de objetivos ou funcionalidade do produto, fazendo uma lista ou Product Backlog, como é chamada na metodologia scrum. Aqui é importante não deixar nenhuma demanda de fora, pois fará toda a diferença para a conclusão do projeto.
+
+Passo 3: Definir prioridades 
+
+Como em qualquer processo de gestão de projetos, é necessário definir prioridades sobre quais funcionalidades devem ser realizadas inicialmente e quais podem ficar para depois. Também é o Product Owner quem faz essa escolha, afinal é ele quem tem a total visão do que se espera do produto. 
+
+Passo 4: Dividir em ciclos (Planejar o Sprint => +- 2 a 4 semanas para entrega)
+
+Neste momento, é necessário dividir o projeto em ciclos, conhecidos como Sprints. Eles determinam o período que cada conjunto de atividades do Product Backlog tem para ser concluída. Não há uma regra, mas, geralmente, os sprints têm duração de duas a quatro semanas. É extremamente importante que esses prazos sejam cumpridos.
+
+
+Passo 5: Iniciar os ciclos
+
+Com os sprints definidos, a equipe planeja as tarefas de cada ciclo e define as prioridades na Sprint Planning Meeting (reunião de planejamento do sprint). Nela, todos os detalhes e funções serão divididos. Com essa decisão tomada, é a hora de iniciar os trabalhos. Quando um sprint começa a ser realizado, ele sai do Product Backlog e vai para o Sprint Backlog. 
+
+Uma das principais características da metodologia scrum é o acompanhamento frequente dos ciclos. 
+=> Diariamente, toda a equipe faz o Daily Scrum ou Daily Meet, no qual cada integrante da equipe diz o que realizou até o dia anterior, o que pretende fazer naquele dia e quais os obstáculos encontrados. 
+(diariamente, 15 minutinho para acompanhar andamento da equipe)
+
+Neste encontro diário, é possível que a equipe discuta alternativas para as tarefas e já corrija eventuais desafios do processo, evitando problemas maiores no futuro.
+
+Passo 6: Revisão dos ciclos
+
+Ao concluir o prazo para finalização de um Sprint, há uma reunião final (Sprint Retrospective) para revisar cada grupo de atividades e validar as funcionalidades. Neste momento, também se faz uma avaliação de eventuais desafios encontrados pelas equipes e que devem ser sanados antes do início do novo sprint. 
+
+Todo esse processo se repete até que o produto seja concluído na sua versão final, com a realização de quantos sprints forem necessários. Não há um limite de sprints definido, sendo papel do Product Owner entender quantos são necessários para o seu projeto.
+
+=> Organize o processo de forma visual. (ex: kanban -> trello)
+=> Dê e receba feedback.
+
