@@ -10,6 +10,7 @@ export default class Teacher extends Person implements Employee{
   constructor(name: string, birthDate: Date, private _subject: Subject, private _salary: number){
     super(name, birthDate)
     // this._admissionDate = new Date(); // atribuindo na linha 6, não precisa inicializar?
+    // this._admissionDate = new Date(); // gera a data que foi instanciado. Pode ser feito direto na declaração, linha 6.
     this.registration = this.generateRegistration(); // aqui chama o set com a validação.
   }
 
