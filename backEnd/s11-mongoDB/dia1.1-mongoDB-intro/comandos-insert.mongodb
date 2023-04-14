@@ -1,0 +1,82 @@
+// Mostra as database criadas
+show('dbs');
+// use() vai criar db se não existir
+use('school');
+show('collections');
+// se não existir a collections (tabela), o insert cria:
+// collection: inventory
+db.inventory.insertOne({
+  item: "jornal",
+  quantidade: "25",
+  tamanho: {
+    h: 20,
+    w: 50,
+    unidade: "cm"
+  },
+  status: "A" 
+});
+// Não precisa se preocupar em migration, model, etc.
+// inserir vários -> array
+db.inventory.insertMany(
+  [
+    {
+      item: "papel",
+      quantidade: "10",
+      tamanho: {
+        h: 8.5,
+        w: 11,
+        unidade: "cm"
+      },
+      status: "A" 
+    },
+    {
+      item: "cartao posta",
+      quantidade: "2",
+      tamanho: {
+        h: 10,
+        w: 15.25,
+        unidade: "cm"
+      },
+      status: "D" 
+    }
+  ]
+);
+
+use('school');
+db.inventory.insertMany(
+  [
+    {
+      _id: 5,
+      item: "caneta",
+      quantidade: "50",
+      tamanho: {
+        h: 8.5,
+        w: 1,
+        unidade: "cm"
+      },
+      status: "A" 
+    },
+    {
+      _id: 6,
+      item: "borracha",
+      quantidade: "25",
+      tamanho: {
+        h: 5,
+        w: 3,
+        unidade: "cm"
+      },
+      status: "A" 
+    },
+        {
+      _id: 7,
+      item: "giz",
+      quantidade: "2",
+      tamanho: {
+        h: 5,
+        w: 3,
+        unidade: "cm"
+      },
+      status: "d" 
+    }
+  ]
+)

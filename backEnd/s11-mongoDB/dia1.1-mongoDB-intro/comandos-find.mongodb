@@ -1,0 +1,37 @@
+// tem q definir a database q será usada
+
+use('school');
+
+// SELECT * FROM school.inventory;
+db.inventory.find();
+db.inventory.find({});
+
+// SELECT * FROM school.inventory WHERE status LIKE 'D';
+use('school');
+db.inventory.find(
+  {
+    status: "D"
+  }
+);
+
+// AND separação por vírgula 
+use('school');
+db.inventory.find(
+  {
+    status: "A",
+    item: "borracha"
+  }
+);
+
+// SUBDOCUMENTOS 1-1: USA ASPAS NA CHAVE!
+// um atributo que contém um outro objeto
+ 
+use('school');
+db.inventory.find(
+  {
+    "tamanho.w": 3
+  }
+);
+
+// SUBDOCUMENTOS 1-N
+// um atributo que contém array com objetos
