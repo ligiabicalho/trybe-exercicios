@@ -1,8 +1,19 @@
-// tem q definir a database q será usada
-
+// Tem q definir a database q será usada
 use('school');
 
 // SELECT * FROM school.inventory;
+
+/* db.collection.find(query, projection);
+
+- query (opcional):
+ Especifica os filtros. 
+ Para retornar todos os documentos da coleção.
+ Qndo vazio, retorna todos os docs.
+
+- projection (opcional):
+especifica quais atributos serão retornados nos documentos selecionados pelo parâmetro query.
+*/
+use('school');
 db.inventory.find();
 db.inventory.find({});
 
@@ -35,3 +46,35 @@ db.inventory.find(
 
 // SUBDOCUMENTOS 1-N
 // um atributo que contém array com objetos
+
+
+// PROJEÇÃO (projection) - segundo parâmetro
+
+/* db.collection.find(
+    { <query> }, 
+    { atributo1: <valor>});
+
+O <valor> pode ser uma das seguintes opções:
+
+1 ou true para incluir um campo nos documentos retornados;
+
+0 ou false para excluir um campo;
+*/
+
+use('school');
+db.inventory.find(
+  {},
+  {
+    // retorna somente os items
+    _id: false, item: true
+  }
+);
+
+use('school');
+db.inventory.find(
+  {},
+  {
+  // retorna todos menos id e item.
+    _id: 0, item: 0
+  }
+);
