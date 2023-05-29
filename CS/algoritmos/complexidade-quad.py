@@ -1,3 +1,4 @@
+# Complexidade quadrática: O(n²)
 def multiply_arrays(array1, array2):
     result = []
     number_of_iterations = 0
