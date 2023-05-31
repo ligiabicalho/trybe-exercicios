@@ -1,10 +1,12 @@
 # Funções 
 
-def funcao_name(param):
+def funcao_name(param: type) -> type:
+    '''docstring: documentação da função'''
     print(param)
 
-# Os parâmetros podem ser passados de forma:
-def soma(x, y):
+# Os parâmetros podem ser passados de diferentes formas:
+def soma(x: float, y: float) -> float:
+    '''recebe dois parâmetros e retorna a soma deles'''
     result = x + y
     return print('x:', x, 'y:', y, 'sum:', result)
 
@@ -16,7 +18,8 @@ soma(y=2, x=4)
 
 ## variádicos: variam em sua quantidade
 ### posicionais variádicos são acessados como uma tupla no interior de uma função
-def sub(*values):
+def sub(*values: float) -> float:
+    '''recebe uma quantidade variada de parâmetros e retorna a subtração deles'''
     i = 0
     result = values[0]
     for value in values:
@@ -28,6 +31,7 @@ def sub(*values):
 
 sub(4, 2)
 sub(10, 3, 5, 7)
+
 ### nomeados variádicos são acessados como um dicionário no interior de uma função
 # dict é uma função que já vem embutida no python
 fulano = dict(nome="Felipe", sobrenome="Silva", idade=25)  # cria um dicionário utilizando as chaves passadas
