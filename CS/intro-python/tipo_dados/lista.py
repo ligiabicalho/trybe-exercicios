@@ -30,3 +30,7 @@ print('reverse:', trybe_course)
 nova_lista = sorted(trybe_course)
 print('nova ordenada:', nova_lista)
 print('original', trybe_course)
+
+# Altera o valor de um elemento da lista
+trybe_course[0] = "Fundamentos de Desenvolvimento Web"
+print('trybe_course:', trybe_course)
