@@ -11,7 +11,7 @@ people_by_name["Maria"]  # saída: 1
 
 # elementos podem ser removidos com a palavra chave del
 del people_by_id[1]
-items = people_by_id.items()  # dict_items([(2, "Fernanda"), (3, "Felipe")])
+items = people_by_id.items()  # retorna array de tuplas chave/valor: [(2, "Fernanda"), (3, "Felipe")]
 print('items', items)
 # é retornada uma coleção iterável de tuplas contendo chaves e valores
 
