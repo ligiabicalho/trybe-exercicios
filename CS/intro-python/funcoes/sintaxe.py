@@ -20,9 +20,9 @@ soma(y=2, x=4)
 ### posicionais variádicos são acessados como uma tupla no interior de uma função
 def sub(*values: float) -> float:
     '''recebe uma quantidade variada de parâmetros e retorna a subtração deles'''
-    i = 0
+    # i = 0
     result = values[0]
-    for value in values:
+    for i, value in enumerate(values):
         if i == len(values) - 1:
             break
         result -= values[i + 1]
