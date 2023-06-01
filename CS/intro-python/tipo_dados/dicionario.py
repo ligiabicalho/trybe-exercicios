@@ -1,6 +1,7 @@
 # Dicionário 
 # Estrutura que associa uma chave a um determinado valor.
 
+dicionario = dict()  # cria um dicionário vazio
 people_by_id = {1: "Maria", 2: "Fernanda", 3: "Felipe"}  # elementos no formato "chave: valor" separados por vírgula, envolvidos por chaves
 
 people_by_name = {"Maria": 1, "Fernanda": 2, "Felipe": 3}  # outro exemplo, dessa vez usando strings como chaves. As aspas são necessárias para que o Python não ache que `Maria`, `Fernanda` e `Felipe` sejam variáveis.
