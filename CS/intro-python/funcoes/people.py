@@ -8,3 +8,7 @@ people_at_concert = (
     rectangle(FIELD_LENGTH, FIELD_WIDTH) * PEOPLE_PER_SQUARE_METER
 )
 print("Estão presentes no show aproximadamente", people_at_concert, "pessoas.")
+# Estão presentes no show aproximadamente 5400 pessoas.
+
+# Ao rodar módulo people.py, o interpretador Python cria diretório __pycache__
+## deve-se coloca-lo no .gitignore ou usar o comando 'cl' para deleta-lo
