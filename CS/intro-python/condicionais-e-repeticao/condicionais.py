@@ -12,9 +12,10 @@ def classify_salary(salary):
         position = "líder"
     return position
 
+
 print(classify_salary(3000))  # saída: júnior
 
-# estruturas de mapeamento (dicts) 
+# estruturas de mapeamento (dicts)
 
 key = "júnior"
 classify_salary = {

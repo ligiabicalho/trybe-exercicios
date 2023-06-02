@@ -31,7 +31,8 @@ print(filtered_restaurants)  # imprime a lista de restaurantes, sem o B e D
 names_list = ['Duda', 'Rafa', 'Cris', 'Yuri']
 new_names_list = [name for name in names_list if 'a' in name]
 
-# Aqui o for percorre cada nome em "names_list", verifica se existe a letra "a" nele,
+# Aqui o for percorre cada nome em "names_list",
+# verifica se existe a letra "a" nele,
 # o adiciona à variável "name", e então gera nossa nova lista "new_names_list"
 print(new_names_list)
 
