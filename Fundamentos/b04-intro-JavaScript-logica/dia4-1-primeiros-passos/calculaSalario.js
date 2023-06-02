@@ -2,14 +2,14 @@
 // Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.
 
 function salarioCLT (salarioBruto){
-    const salarioBase = descontoINSS(salarioBruto);
-    const salarioLiquido = descontoIR(salarioBase);
+    const { salarioBase } = calculaSalarioDescontadoINSS(salarioBruto);
+    const { salarioLiquido } = calculaSalarioDescontadoIR(salarioBase);
     const { descontoTrybe, salarioFinal } = valorAPagarFinanciamentoTrybe(salarioBruto, salarioLiquido);
 
-    return `O salário líquido é ${salarioLiquido.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}, e descontando o pagamento do curso, de ${descontoTrybe.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}, receberei ${salarioFinal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`;
+    return `O salário líquido a receber é ${salarioLiquido.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}, e descontando o pagamento do curso, de ${descontoTrybe.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}, receberei ${salarioFinal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`;
 }
 
-const descontoINSS = (salarioBruto) => {
+const calculaSalarioDescontadoINSS = (salarioBruto) => {
     let salarioBase = 0;
     if (salarioBruto <= 1556.94) {
         salarioBase = salarioBruto * 0.92; // aliquota 8%
@@ -20,17 +20,15 @@ const descontoINSS = (salarioBruto) => {
     } else {
         salarioBase = salarioBruto - 570.88;
     }
-    return salarioBase;
+    return {salarioBase};
 }
 
-const descontoIR = (salarioBase) => {
+const calculaSalarioDescontadoIR = (salarioBase) => {
     let salarioLiquido = 0;
-    let valorIR = 0;
     if (salarioBase <= 1903.98) {
-       salarioLiquido = salarioBase;
+        salarioLiquido = salarioBase;
     } else if (salarioBase <= 2826.65) {
-        valorIR = (salarioBase * 0.075) - 142.80; // alíquota 7,5% e parcela de R$ 142,80 a deduzir do imposto;
-        salarioLiquido = salarioBase - valorIR;
+        salarioLiquido = calculoIR(salarioBase, 0.075, 142.80) // alíquota 7,5% e parcela de R$ 142,80 a deduzir do imposto;
     } else if (salarioBase <= 3751.05) {
         valorIR = (salarioBase * 0.15) - 354.80; // alíquota de 15% e parcela de R$ 354,80 
         salarioLiquido = salarioBase - valorIR;
@@ -41,13 +39,23 @@ const descontoIR = (salarioBase) => {
         valorIR = (salarioBase * 0.275) - 869.36; // alíquota de 27,5% e parcela de R$ 869,36
         salarioLiquido = salarioBase - valorIR;
     } 
-    return salarioLiquido;
+    return {salarioLiquido};
 }
 
+const calculoIR = (salarioBase, aliquota, parcela) => {
+  let valorIR = (salarioBase * aliquota) - parcela;
+  let salarioLiquido = salarioBase - valorIR;
+  return salarioLiquido
+}
+  
 const valorAPagarFinanciamentoTrybe = (salarioBruto=3000, salarioLiquido=2612.55) => {
     let descontoTrybe = salarioBruto * 0.17;
     let salarioFinal = salarioLiquido - descontoTrybe;
     return { descontoTrybe, salarioFinal };
 }
 
-console.log(salarioCLT(3000.00)); 
+const listaSalarios = [3000, 3500, 4000, 4500]
+for (let index = 0; index < listaSalarios.length; index += 1){
+  let salarioAReceber = salarioCLT(listaSalarios[index])
+  console.log(salarioAReceber);
+}
