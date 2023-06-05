@@ -87,18 +87,19 @@ class Liquidificador:
             print("Liquidificador desligado")
 
 
-meu_liquidificador = Liquidificador("Azul", 200, 127, 200)
-seu_liquidificador = Liquidificador(
-    cor="Vermelho", potencia=250, tensao=220, preco=100
-)
+if __name__ == "__main__":
+    meu_liquidificador = Liquidificador("Azul", 200, 127, 200)
+    seu_liquidificador = Liquidificador(
+        cor="Vermelho", potencia=250, tensao=220, preco=100
+    )
 
-# print("Cor:", meu_liquidificador.cor)
-print("Cor:", meu_liquidificador.get_cor())
-seu_liquidificador.caracteristicas()
-seu_liquidificador.ligar(2)
-seu_liquidificador.aumenta_velocidade()
-seu_liquidificador.aumenta_velocidade()
-seu_liquidificador.desligar()
-seu_liquidificador.aumenta_velocidade()
-meu_liquidificador.set_cor("Preto")
-print("Nova cor:", meu_liquidificador.get_cor())
+    # print("Cor:", meu_liquidificador.cor)
+    print("Cor:", meu_liquidificador.get_cor())
+    seu_liquidificador.caracteristicas()
+    seu_liquidificador.ligar(2)
+    seu_liquidificador.aumenta_velocidade()
+    seu_liquidificador.aumenta_velocidade()
+    seu_liquidificador.desligar()
+    seu_liquidificador.aumenta_velocidade()
+    meu_liquidificador.set_cor("Preto")
+    print("Nova cor:", meu_liquidificador.get_cor())

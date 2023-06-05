@@ -22,6 +22,10 @@ class Liquidificador:
         self.__velocidade_maxima = 3
         self.__corrente_atual_no_motor = 0
 
+    # método __str__ é chamado quando usamos print(objeto_da_classe)
+    def __str__(self):
+        return f"Liquidificador {self.cor}, potência {self._potencia}W. "
+
     def caracteristicas(self):
         print("Velocidade:", self.__velocidade)
         print("V. max:", self.__velocidade_maxima)
@@ -48,14 +52,15 @@ class Liquidificador:
         return self.__ligado
 
 
-# ABSTRAÇÃO
-# oculta os detalhes da implementação
-# mostrando apenas a funcionalidade para quem acessa os métodos,
+if __name__ == "__main__":
+    # ABSTRAÇÃO
+    # oculta os detalhes da implementação
+    # mostrando apenas a funcionalidade para quem acessa os métodos,
 
-liquidificador_vermelho = Liquidificador("Vermelho", 250, 220, 100)
-liquidificador_vermelho.ligar(1)
-print("Está ligado?", liquidificador_vermelho.esta_ligado())
-# Está ligado? True
-liquidificador_vermelho.desligar()
-print("Está ligado?", liquidificador_vermelho.esta_ligado())
-# Está ligado? False
+    liquidificador_vermelho = Liquidificador("Vermelho", 250, 220, 100)
+    liquidificador_vermelho.ligar(1)
+    print("Está ligado?", liquidificador_vermelho.esta_ligado())
+    # Está ligado? True
+    liquidificador_vermelho.desligar()
+    print("Está ligado?", liquidificador_vermelho.esta_ligado())
+    # Está ligado? False
