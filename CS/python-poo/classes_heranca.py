@@ -72,9 +72,32 @@ class Liquidificador(Eletrodomestico):
         print("Usando super().metodo()", super().esta_ligado())
 
 
+class Secador(Eletrodomestico):
+    pass
+
+
+class Batederia(Eletrodomestico):
+    pass
+
+
+class Maquina_de_Lavar(Eletrodomestico):
+    pass
+
+
 eletro_liquidificador = Liquidificador("vermelho", 1000, 220, 100)
 eletro_liquidificador.ligar(4)
 eletro_liquidificador.metodo_chama_superclasse()
 eletro_liquidificador.desligar()
 eletro_liquidificador.metodo_chama_superclasse()
 print(eletro_liquidificador._Eletrodomestico__velocidade_maxima)
+
+secador = Secador("azul", 150, 220, 200)
+batedeira = Batederia("vermelha", 200, 220, 300)
+maquina_de_lavar = Maquina_de_Lavar("inox", 2000, 220, 1000)
+
+print(
+    f"""O valor do secador, batedeira e máquina de lavar é:
+      {secador.preco}
+      {batedeira.preco}
+      {maquina_de_lavar.preco}"""
+)
