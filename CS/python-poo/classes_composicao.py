@@ -18,6 +18,8 @@ class Pessoa:
             f"{self.nome} - possui {self.saldo_na_conta} reais em sua conta."
         )
 
+    # COMPOSIÇÃO
+    # esse método recebe um objeto da classe Liquidificador como parâmetro
     def comprar_liquidificador(self, liquidificador):
         if liquidificador.preco <= self.saldo_na_conta:
             self.saldo_na_conta -= liquidificador.preco
@@ -28,8 +30,14 @@ if __name__ == "__main__":
     pessoa_cozinheira = Pessoa("Jacquin", 1000)
     print(pessoa_cozinheira)
     print("Possui liquidificador?", pessoa_cozinheira.liquidificador)
+
+    # instância da Classe liquidificador
     liquidificador_vermelho = Liquidificador("Vermelho", 250, 220, 100)
+
+    # ao chamar o método comprar_liquidificador,
+    # é passado o objeto liquidificador_vermelho da classe Liquidificador
     pessoa_cozinheira.comprar_liquidificador(liquidificador_vermelho)
+
     print(pessoa_cozinheira)
     print(
         "Qual liquidificador comprado?",
