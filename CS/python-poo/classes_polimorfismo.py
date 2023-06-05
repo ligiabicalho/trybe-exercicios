@@ -1,9 +1,12 @@
 class Pessoa:
+    # msg_erro =
+
     def __init__(self, nome, idade=None, saldo_na_conta=None):
         self.idade = idade
         self.nome = nome
         self.__saldo_na_conta = saldo_na_conta
-        self.brinquedos = []
+        self.eletrodomesticos = []
+        self.__msg_erro = "Saldo insuficiente"
 
     def __str__(self):
         msg = (
@@ -13,8 +16,14 @@ class Pessoa:
 
     def pagar_conta(self, valor_conta):
         if self.__saldo_na_conta < valor_conta:
-            raise ValueError("Saldo insuficiente")
+            raise ValueError(self.msg_erro)
         self.__saldo_na_conta -= valor_conta
+
+    def comprar_eletrodomestico(self, eletrodomestico):
+        if self.__saldo_na_conta < eletrodomestico.preco:
+            raise ValueError(self.msg_erro)
+        self.__saldo_na_conta -= eletrodomestico.preco
+        self.eletrodomestico.append(eletrodomestico)
 
     @property
     def saldo(self):
@@ -41,6 +50,10 @@ print(pessoa_1, pessoa_2, pessoa_3, pessoa_4, sep="\n")
 
 # Exemplo:
 class PessoaInvestidora(Pessoa):
+    def __init__(self, nome, idade, saldo_na_conta, investimentos=True):
+        super().__init__(nome, idade, saldo_na_conta)
+        self.investimentos = investimentos
+
     def pagar_conta(self, valor_conta):
         if self.saldo < valor_conta:
             raise ValueError("Saldo insuficiente")
