@@ -80,7 +80,7 @@ class Batederia(Eletrodomestico):
     pass
 
 
-class Maquina_de_Lavar(Eletrodomestico):
+class MaquinaDeLavar(Eletrodomestico):
     pass
 
 
@@ -93,7 +93,7 @@ print(eletro_liquidificador._Eletrodomestico__velocidade_maxima)
 
 secador = Secador("azul", 150, 220, 200)
 batedeira = Batederia("vermelha", 200, 220, 300)
-maquina_de_lavar = Maquina_de_Lavar("inox", 2000, 220, 1000)
+maquina_de_lavar = MaquinaDeLavar("inox", 2000, 220, 1000)
 
 print(
     f"""O valor do secador, batedeira e máquina de lavar é:
