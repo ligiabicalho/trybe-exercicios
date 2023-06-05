@@ -8,6 +8,7 @@ class Eletrodomestico:
     def __init__(self, cor, potencia, tensao, preco):
         self.preco = preco
         self.cor = cor
+        self.teste = "teste"
         self._potencia = potencia
         self._tensao = tensao
         self.__ligado = False
@@ -43,8 +44,37 @@ class Eletrodomestico:
     def cor(self, nova_cor):
         self.__cor = nova_cor
 
+    @property
+    def velocidade_maxima(self):
+        return self.__velocidade_maxima
+
+    @velocidade_maxima.setter
+    def velocidade_maxima(self, nova_vel):
+        self.__velocidade_maxima = nova_vel
+
 
 # Liquidificador herda/extends de Eletrodomestico
 # possui acesso a todos os métodos e atributos (públicos e protegidos)
 class Liquidificador(Eletrodomestico):
-    pass
+    def __init__(self, cor, potencia, tensao, preco):
+        super().__init__(cor, potencia, tensao, preco)
+
+        # alterando valor de um atributo da classe mãe
+        # caso seja um atributo privado, necessário ter getters/setters.
+        self.velocidade_maxima = 6
+        self.teste = "teste2"
+
+    def metodo_chama_superclasse(self):
+        print("Vou printar o valor pelo método criado em Eletrodoméstico:")
+        print(
+            "Usando Class_name.metodo(self)", Eletrodomestico.esta_ligado(self)
+        )
+        print("Usando super().metodo()", super().esta_ligado())
+
+
+eletro_liquidificador = Liquidificador("vermelho", 1000, 220, 100)
+eletro_liquidificador.ligar(4)
+eletro_liquidificador.metodo_chama_superclasse()
+eletro_liquidificador.desligar()
+eletro_liquidificador.metodo_chama_superclasse()
+print(eletro_liquidificador._Eletrodomestico__velocidade_maxima)
