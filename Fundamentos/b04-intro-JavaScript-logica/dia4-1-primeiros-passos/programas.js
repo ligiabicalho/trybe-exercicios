@@ -66,24 +66,24 @@ let b = 7;
     //     console.log('Erro: ângulo inválido!');
     // }
 
-//6.Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz. 
+// 6.Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz. 
 
-    // let pecaXadrez = 'Bispoo';
-    // switch (pecaXadrez.toLowerCase()) {
-    //     case 'peão': console.log('Avança uma casa para frente. Pode atacar para diagonal. Não pode recuar.');
-    //         break;
-    //     case 'bispo': console.log('Diagonais.');
-    //         break;
-    //     case 'cavalo': console.log('Se move em "L". O único que pode saltar sobre outra peça.');
-    //         break;
-    //     case 'torre': console.log('Horizontais ou verticais.');
-    //         break;
-    //     case 'dama': console.log('Diagonais, horizontais ou verticais.');
-    //         break;
-    //     case 'rei': console.log('Uma casa, para qualquer direção');
-    //         break;
-    //     default: console.log('Opção inválida');
-    // }
+    let pecaXadrez = 'Bispoo';
+    switch (pecaXadrez.toLowerCase()) {
+        case 'peão': console.log('Avança uma casa para frente. Pode atacar para diagonal. Não pode recuar.');
+            break;
+        case 'bispo': console.log('Diagonais.');
+            break;
+        case 'cavalo': console.log('Se move em "L". O único que pode saltar sobre outra peça.');
+            break;
+        case 'torre': console.log('Horizontais ou verticais.');
+            break;
+        case 'dama': console.log('Diagonais, horizontais ou verticais.');
+            break;
+        case 'rei': console.log('Uma casa, para qualquer direção');
+            break;
+        default: console.log('Opção inválida');
+    }
 
 //7.Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F.
 
@@ -156,39 +156,5 @@ let b = 7;
     // }
     // console.log(lucroMil(60, 100)
 
-// 11. Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.
 
-function salarioCLT (salarioBruto){
-    let salarioBase = 0;
-    let salarioLiquido = 0;
-    let valorIR = 0;
-    if (salarioBruto <= 1556.94) {
-        salarioBase = salarioBruto * 0.92;
-    } else if (salarioBruto <= 2594.92) {
-        salarioBase = salarioBruto * 0.91;
-    } else if (salarioBruto <= 5189.82) {
-        salarioBase = salarioBruto * 0.89;
-    } else {
-        salarioBase = salarioBruto - 570.88;
-    }
-    if (salarioBase <= 1903.98) {
-       salarioLiquido = salarioBase;
-    } else if (salarioBase <= 2826.65) {
-        valorIR = (salarioBase * 0.075) - 142.80;
-        salarioLiquido = salarioBase - valorIR;
-    } else if (salarioBase <= 3751.05) {
-        valorIR = (salarioBase * 0.15) - 354.80;
-        salarioLiquido = salarioBase - valorIR;
-    } else if (salarioBase <= 4664.68) {
-        valorIR = (salarioBase * 0.225) - 636.13;
-        salarioLiquido = salarioBase - valorIR;
-    }else {
-        valorIR = (salarioBase * 0.275) - 869.36;
-        salarioLiquido = salarioBase - valorIR;
-    } 
-      return salarioLiquido;
-//   let descontandoTrybe = salarioLiquido * 0.83;
-//   return descontandoTrybe;
-}
-console.log(salarioCLT(6000.00)); 
 
