@@ -1,14 +1,4 @@
-# DEBUGGER DO VS CODE
-
-# colocar o breakpoint na linha desejada.
-# executar código em modo debug: apertando F5 ou pela aba Run and Debug.
-
-# Continue (continuar): avança com a execução em modo debug até o próximo breakpoint (atalho F5)
-# Step over (contornar): executa a linha atual do código sem entrar em funções (atalho F10)
-# Step into (intervir): executa a linha atual do código e entra em funções (atalho F11)
-# Step out (sair): sai da função atual e continua a execução (atalho Shift + F11)
-# Restart (reiniciar): recomeça a execução do debugger (atalho depende do seu Sistema Operacional)
-# Stop (interromper): encerra a execução do debugger (atalho depende do seu Sistema Operacional)
+# Orientações no arquivo *.md
 
 from math import factorial
 
