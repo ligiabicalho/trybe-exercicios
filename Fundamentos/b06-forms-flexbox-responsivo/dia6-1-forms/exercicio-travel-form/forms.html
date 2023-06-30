@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="./script.js"></script>
   <title>Dia 6.1 - Formulário Trybe Trip</title>
 </head>
 <body>
   <header>
-    <h1>Formulário Trybe Trip</h1>
+    <h1 id="title">Formulário Trybe Travel</h1>
     <p>Preencha e concorra a uma viagem!</p>
   </header>
-  <form>
-    <main>
+  <main>
+    <form id="main-form">
       <div class="dados">
         <label for="nome">Nome completo:</label>
-        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" minlength="10" maxlength="40" required>
+        <input type="text" name="nome" id="fullname" placeholder="Digite seu nome" minlength="10" maxlength="40" required>
       </div>
       <div class="dados">
         <label for="email">E-mail:</label>
@@ -59,6 +61,5 @@
       </div>
     </main>
   </form>
-  <script src="./script.js"></script>
 </body>
 </html>
